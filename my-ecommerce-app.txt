@@ -1,0 +1,35 @@
+my-ecommerce-app/
+├── prisma/                        # 💾 Prisma schema + migrations
+├── public/                        # Static assets: images, fonts, favicon
+├── src/
+│   ├── app/                       # Next.js App Router root
+│   │   ├── layout.tsx            # Root layout – nav toggles by role (public/admin/seller)
+│   │   ├── page.tsx              # Public homepage
+│   │   ├── api/                  # API route handlers
+│   │   │   ├── admin/            # Admin-only endpoints (products, orders, users)
+│   │   │   ├── seller/           # Seller endpoints (inventory, sales)
+│   │   │   └── store/            # Storefront endpoints (product catalog, cart)
+│   │   ├── store/                # 🛍️ Public storefront (product listing, details)
+│   │   ├── cart/                 # Cart feature
+│   │   ├── checkout/             # Checkout flow
+│   │   ├── auth/                 # Login/signup pages
+│   │   ├── admin/                # 🔧 Admin dashboard (protected)
+│   │   │   ├── layout.tsx        # Sidebar + navigation for admin role
+│   │   │   ├── page.tsx          # Admin home (sales overview)
+│   │   │   ├── orders/           # Manage all orders
+│   │   │   ├── products/         # Manage product catalog
+│   │   │   └── users/            # Manage users & roles
+│   │   └── seller/               # 🧑‍💼 Seller portal (protected)
+│   │       ├── layout.tsx        # Seller sidebar
+│   │       ├── page.tsx          # Seller dashboard (your sales/performance)
+│   │       ├── products/         # Manage your own products
+│   │       └── orders/           # View/manage your orders
+│   ├── components/               # Shared UI (tables, buttons, modals)
+│   ├── hooks/                    # Shared React hooks (useCart, useAuth, useSeller)
+│   ├── lib/                      # Utilities (formatters, validators)
+│   ├── services/                 # Business logic (paymentService, orderService)
+│   ├── types/                    # Global TypeScript types/interfaces
+│   └── styles/                   # Global CSS / Tailwind config
+├── .env.local
+├── next.config.js
+└── package.json
