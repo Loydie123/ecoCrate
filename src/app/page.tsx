@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { features, navigationItems, footerNavigation } from "@/constants";
+import { features } from "@/constants";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -55,7 +55,6 @@ export default function Home() {
         </div>
       </section>
 
-
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -63,7 +62,7 @@ export default function Home() {
               Why Choose EcoCrate?
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              We're committed to making sustainable living accessible and convenient for everyone.
+              We&apos;re committed to making sustainable living accessible and convenient for everyone.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -86,7 +85,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-teal-700">
