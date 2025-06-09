@@ -1,4 +1,4 @@
-export const navigationItems = ['Shop', 'About', 'Blog', 'Contact'] as const;
+ export const navigationItems = ['Shop', 'About', 'Blog', 'Contact'] as const;
 
 export interface NavigationItem {
   label: string;
@@ -7,9 +7,9 @@ export interface NavigationItem {
 
 export const footerNavigation = {
   shop: [
-    { label: 'New Arrivals', href: '/store/new' },
-    { label: 'Best Sellers', href: '/store/bestsellers' },
-    { label: 'Deals', href: '/store/deals' }
+    { label: 'New Arrivals', href: '/components/ui/shop' },
+    { label: 'Best Sellers', href: '/components/ui/shop' },
+    { label: 'Deals', href: '/components/ui/shop' }
   ],
   about: [
     { label: 'Our Story', href: '/about' },

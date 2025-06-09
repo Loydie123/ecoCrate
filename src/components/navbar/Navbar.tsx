@@ -20,18 +20,21 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-2">
-            {navigationItems.map((item) => (
-              <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                className="relative px-3 py-2 group"
-              >
-                <span className="relative z-10 text-gray-600 group-hover:text-emerald-600 transition-colors">
-                  {item}
-                </span>
-                <span className="absolute inset-0 w-full h-full rounded-full bg-emerald-50 scale-0 group-hover:scale-100 transition-transform origin-center"></span>
-              </Link>
-            ))}
+            {navigationItems.map((item) => {
+              const path = item === 'Shop' ? '/components/ui/shop' : `/${item.toLowerCase()}`;
+              return (
+                <Link
+                  key={item}
+                  href={path}
+                  className="relative px-3 py-2 group"
+                >
+                  <span className="relative z-10 text-gray-600 group-hover:text-emerald-600 transition-colors">
+                    {item}
+                  </span>
+                  <span className="absolute inset-0 w-full h-full rounded-full bg-emerald-50 scale-0 group-hover:scale-100 transition-transform origin-center"></span>
+                </Link>
+              );
+            })}
 
             <div className="ml-4 flex items-center gap-2">
               <Link
@@ -85,15 +88,18 @@ export function Navbar() {
       }`}>
         <div className="absolute w-full bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
-            {navigationItems.map((item) => (
-              <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                className="block px-4 py-3 rounded-xl text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors"
-              >
-                {item}
-              </Link>
-            ))}
+            {navigationItems.map((item) => {
+              const path = item === 'Shop' ? '/components/ui/shop' : `/${item.toLowerCase()}`;
+              return (
+                <Link
+                  key={item}
+                  href={path}
+                  className="block px-4 py-3 rounded-xl text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors"
+                >
+                  {item}
+                </Link>
+              );
+            })}
             <div className="grid grid-cols-2 gap-2 pt-4">
               <Link
                 href="/auth/login"
